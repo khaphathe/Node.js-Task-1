@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media Server API Documentation</title>
+</head>
+<body>
+  <h1>Welcome to the Media Server API</h1>
+  <p>This API allows you to view, add, update, and delete items in three categories:</p>
+  <ul>
+    <li><strong>/movies</strong> — List of movies (title, year)</li>
+    <li><strong>/series</strong> — List of series (title, seasons)</li>
+    <li><strong>/songs</strong> — List of songs (title, artist)</li>
+  </ul>
+
+  <h2>Supported Methods:</h2>
+  <ul>
+    <li><strong>GET</strong> — View all items</li>
+    <li><strong>POST</strong> — Add a new item (JSON body)</li>
+    <li><strong>PUT</strong> — Update an item (JSON body with existing title)</li>
+    <li><strong>DELETE</strong> — Remove an item (JSON body with title)</li>
+  </ul>
+
+  <h3>Example JSON (POST/PUT):</h3>
+  <pre>{
+  "title": "The Matrix",
+  "year": 1999
+}</pre>
+
+  <h3>To delete:</h3>
+  <pre>{
+  "title": "The Matrix"
+}</pre>
+</body>
+</html>
